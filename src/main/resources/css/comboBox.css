@@ -1,0 +1,36 @@
+.combo-box {
+    -fx-font-family: "Fira Code Retina";
+    -fx-font-size: 14px;
+    -fx-border-width: 2px;
+}
+
+.combo-box-base {
+    -fx-background-color: #00A9A5;
+}
+
+.combo-box-base:hover {
+    -fx-border-color: whitesmoke;
+}
+
+.combo-box-base:focused {
+    -fx-border-width: 2px;
+    -fx-border-color: #62BEC1; // get something a little lighter
+}
+
+.combo-box .list-view .list-cell {
+    -fx-background-color: #0B5351;
+    -fx-border-width: 0;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.combo-box .list-view .list-cell:hover {
+    -fx-background-color: whitesmoke;
+    -fx-text-fill: #0B5351;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #0B5351;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}

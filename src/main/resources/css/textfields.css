@@ -1,0 +1,9 @@
+.text-field:hover {
+    -fx-border-width: 2px;
+    -fx-border-color: whitesmoke;
+}
+
+.text-field:focused {
+    -fx-border-width: 2px;
+    -fx-border-color: #62BEC1; // get something a little lighter
+}

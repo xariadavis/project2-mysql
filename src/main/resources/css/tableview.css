@@ -1,0 +1,96 @@
+.table-view {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-alignment: CENTER_LEFT;
+    -fx-text-fill: WHITE;
+    -fx-font-size: 14;
+    -fx-opacity: 0.5;
+    -fx-font-family: 'Fira Code', Regular;
+}
+
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: transparent;
+    /*-fx-background-radius: 7px 7px 0px 0px;*/
+    -fx-background-insets: 0 0px 0 0;
+    -fx-padding: 0 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-border-color: transparent;
+    -fx-padding: 10 0 10 10px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #0A3134;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  #00A9A5;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #242636;
+}
+
+.table-row-cell {
+    -fx-background-color: #092327;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0em;
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+}
+
+.table-row-cell .text{
+    -fx-fill: WHITE ;
+    -fx-font-family: 'Fira Code', Regular;
+    -fx-font-size: 13;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #0B5351, #0A3134);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #0B5351, #0A3134);
+}
+
+/*.table-row-cell: highlighted {*/
+/*    -fx-background-color: #81c483;*/
+/*    -fx-background-radius: 15px;*/
+/*}*/
+
+.text-field-table-cell .text-field {
+    -fx-font-size: 14;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-font-family: 'Fira Code Retina', Regular;
+    -fx-text-fill: white;
+    -fx-background-color:  #1f1d2c;
+}

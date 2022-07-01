@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #092327 #092327; -fx-background-radius: 15; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1035.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/exitButton.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="exitButton" layoutX="1035.0" layoutY="20.0" onAction="#exitWindow" prefHeight="30.0" prefWidth="30.0" ripplerFill="#6bbcd0" text=" " />
+      <AnchorPane fx:id="loginPane" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #092327 #092327; -fx-background-radius: 15; -fx-border-radius: 15;">
+         <children>
+            <ImageView fitHeight="483.0" fitWidth="518.0" layoutX="299.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/dataWorld.gif" />
+               </image>
+            </ImageView>
+            <Pane layoutX="319.0" layoutY="401.0" prefHeight="268.0" prefWidth="442.0" style="-fx-background-color: #0A3134; -fx-border-radius: 30; -fx-background-radius: 30;">
+               <children>
+                  <Pane layoutX="50.0" layoutY="97.0" prefHeight="45.0" prefWidth="343.0" style="-fx-background-color: #0B5351; -fx-border-radius: 30; -fx-background-radius: 30;">
+                     <children>
+                        <TextField fx:id="usernameField" layoutX="114.0" prefHeight="45.0" prefWidth="232.0" style="-fx-border-radius: 30; -fx-background-color: #00A9A5; -fx-background-radius: 30;" stylesheets="@css/textfields.css">
+                           <font>
+                              <Font name="Fira Code Retina" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="WHITESMOKE" layoutX="24.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+                           <font>
+                              <Font name="Fira Code Retina" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="50.0" layoutY="158.0" prefHeight="45.0" prefWidth="343.0" style="-fx-background-color: #0B5351; -fx-border-radius: 30; -fx-background-radius: 30;">
+                     <children>
+                        <Text fill="WHITESMOKE" layoutX="29.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                           <font>
+                              <Font name="Fira Code Retina" size="16.0" />
+                           </font>
+                        </Text>
+                        <PasswordField fx:id="passwordField" layoutX="114.0" onAction="#onEnter" prefHeight="45.0" prefWidth="232.0" style="-fx-background-color: #00A9A5; -fx-background-radius: 30; -fx-border-radius: 30;" stylesheets="@css/textfields.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="loginButton" layoutX="253.0" layoutY="215.0" onAction="#login" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #0B5351; -fx-background-radius: 30; -fx-border-radius: 30;" text="Login" textFill="WHITESMOKE">
+                     <font>
+                        <Font name="Fira Code Retina" size="17.0" />
+                     </font>
+                  </JFXButton>
+                  <Pane layoutX="50.0" layoutY="38.0" prefHeight="45.0" prefWidth="343.0" style="-fx-background-color: #0B5351; -fx-border-radius: 30; -fx-background-radius: 30;">
+                     <children>
+                        <Text fill="WHITESMOKE" layoutX="40.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File">
+                           <font>
+                              <Font name="Fira Code Retina" size="16.0" />
+                           </font>
+                        </Text>
+                        <ComboBox fx:id="filesComboBox" layoutX="114.0" prefHeight="45.0" prefWidth="232.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" stylesheets="@css/comboBox.css" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Text fill="WHITESMOKE" layoutX="401.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="project 2" textAlignment="CENTER" wrappingWidth="278.30450439453125">
+               <font>
+                  <Font name="Fira Code Retina" size="33.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1035.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/exitButton.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="exitButton2" layoutX="1035.0" layoutY="20.0" onAction="#exitWindow" prefHeight="30.0" prefWidth="30.0" ripplerFill="#6bbcd0" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #092327 #092327 #092327 #092327; -fx-background-radius: 15; -fx-border-radius: 15;" visible="false">
+         <children>
+            <TextField fx:id="userTypeTF" editable="false" layoutX="57.0" layoutY="35.0" onAction="#displayUserTypeTF" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #0A3134 #0A3134; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-fill: whitesmoke; -fx-font-family: &quot;Fira Code Retina&quot;; -fx-font-weight: 300;">
+               <font>
+                  <Font name="Fira Code Retina" size="13.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="urlTF" editable="false" layoutX="270.0" layoutY="35.0" onAction="#displayURL" prefHeight="25.0" prefWidth="756.0" style="-fx-background-color: #0A3134 #0A3134; -fx-background-radius: 30; -fx-border-radius: 30; -fx-text-fill: whitesmoke; -fx-font-family: &quot;Fira Code Retina&quot;; -fx-font-weight: 300;" />
+            <Label layoutX="57.0" layoutY="76.0" text="Enter a SQL Command:" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Fira Code Retina" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="311.0" text="SQL Execution Result Window:" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Fira Code Retina" size="15.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="SQLCommand_txtA" layoutX="54.0" layoutY="104.0" prefHeight="166.0" prefWidth="975.0" style="-fx-control-inner-background: #0B5351 #0B5351;" stylesheets="@css/textarea.css" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextArea>
+            <JFXButton fx:id="executeCommandbtn" layoutX="723.0" layoutY="278.0" onAction="#getRequestedCommand" prefHeight="30.0" prefWidth="140.0" ripplerFill="#092327" style="-fx-background-color: #0B5351; -fx-background-radius: 15; -fx-border-radius: 15;" text="Execute Command" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Fira Code Retina" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="clearCommandbtn" layoutX="883.0" layoutY="278.0" onAction="#clearCommand" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #0B5351; -fx-background-radius: 15; -fx-border-radius: 15;" text="Clear Command" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Fira Code Retina" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="clearResultsbtn" layoutX="890.0" layoutY="661.0" onAction="#clearResults" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #0B5351; -fx-background-radius: 15; -fx-border-radius: 15;" text="Clear Results" textFill="WHITESMOKE">
+               <font>
+                  <Font name="Fira Code Retina" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1035.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/exitButton.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="exitButton1" layoutX="1035.0" layoutY="20.0" onAction="#exitWindow" prefHeight="30.0" prefWidth="30.0" ripplerFill="#6bbcd0" text=" " />
+            <TableView fx:id="resultsTable" layoutX="54.0" layoutY="335.0" prefHeight="320.0" prefWidth="975.0" stylesheets="@css/tableview.css">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

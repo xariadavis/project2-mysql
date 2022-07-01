@@ -1,0 +1,19 @@
+.text-area {
+    -fx-font-family: "Fira Code Retina";
+    -fx-font-size: 14px;
+    /*-fx-text-box-border: transparent;*/
+    /*-fx-faint-focus-color: transparent;*/
+    /*-fx-focus-color: transparent;*/
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-background-color: transparent;
+}
+
+.text-area .content {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+}
+
+.text-area .viewport{
+    -fx-background-color: transparent;
+}
