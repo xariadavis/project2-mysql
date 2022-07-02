@@ -6,6 +6,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -128,6 +129,7 @@ public class Controller {
 
             loginPane.setVisible(false);
             mainPane.setVisible(true);
+            SQLCommand_txtA.requestFocus();
 
             displayUserTypeTF();
             displayURL();
@@ -144,6 +146,11 @@ public class Controller {
 
     public void onEnter() {
         // if the login page is visible then attempt to login
+        passwordField.setOnKeyPressed(event -> {
+            if (event.getCode().equals(KeyCode.ENTER)) {
+                login();
+            }
+        });
     }
 
     public void displayUserTypeTF() {
@@ -207,6 +214,17 @@ public class Controller {
         System.out.println();
         System.out.println();
         System.out.println("The number of rows is: " + sqlHandler.getNumRows());
+    }
+
+    public void backToLogin() {
+        try {
+            getConnection().close();
+            mainPane.setVisible(false);
+            loginPane.setVisible(true);
+        } catch (SQLException e) {
+            System.out.println("Failed to go back to login page.");
+            e.printStackTrace();
+        }
     }
 
     // ====== Getters/Setters ======= //

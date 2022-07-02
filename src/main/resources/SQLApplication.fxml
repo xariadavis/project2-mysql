@@ -139,6 +139,12 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
+            <ImageView fx:id="backImage" fitHeight="30.0" fitWidth="30.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/back.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="backButton" layoutX="20.0" layoutY="20.0" onAction="#backToLogin" prefHeight="30.0" prefWidth="30.0" />
          </children>
       </AnchorPane>
    </children>
