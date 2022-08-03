@@ -1,3 +1,12 @@
+/*
+  Name: Xaria Davis
+  Course: CNT 4714 Summer 2022
+  Assignment title: Project 2 – A Two-tier Client-Server Application
+  Date:  June 26, 2022
+
+  Class:  Enterprise Computing
+*/
+
 import com.jfoenix.controls.JFXButton;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import javafx.beans.property.ReadOnlyObjectWrapper;
@@ -53,7 +62,6 @@ public class Controller {
         try {
             if(getConnection() != null) {
                 getConnection().close();
-                System.out.println("Connection closed");
             } else {
                 System.out.println("No connection to close");
             }
@@ -135,11 +143,9 @@ public class Controller {
             displayURL();
         } else if (getFileName() == null ){
             // show error message
-            System.out.println("No filetype was chosen");
             showErrorMessage("Please choose a file type.");
         } else {
             // show error message
-            System.out.println("Your username or password is incorrect :?");
             showErrorMessage("Your username or password is incorrect.");
         }
     }
@@ -211,16 +217,25 @@ public class Controller {
         resultsTable.refresh();
         resultsTable.setItems(data);
         clearResultsbtn.setVisible(true);
-        System.out.println();
-        System.out.println();
-        System.out.println("The number of rows is: " + sqlHandler.getNumRows());
     }
 
     public void backToLogin() {
         try {
             getConnection().close();
+
+            // clear everything on the main pane
+            SQLCommand_txtA.clear();
+            resultsTable.getItems().clear();
+            resultsTable.getColumns().clear();
+            clearResultsbtn.setVisible(false);
             mainPane.setVisible(false);
+
+            usernameField.clear();
+            passwordField.clear();
+            filesComboBox.getItems().clear();
+            addFileOptions();
             loginPane.setVisible(true);
+
         } catch (SQLException e) {
             System.out.println("Failed to go back to login page.");
             e.printStackTrace();

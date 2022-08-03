@@ -1,3 +1,12 @@
+/*
+  Name: Xaria Davis
+  Course: CNT 4714 Summer 2022
+  Assignment title: Project 2 – A Two-tier Client-Server Application
+  Date:  June 26, 2022
+
+  Class:  Enterprise Computing
+*/
+
 import com.google.common.collect.Lists;
 import com.mysql.cj.jdbc.MysqlDataSource;
 
@@ -30,8 +39,6 @@ public class SQLHandler {
     public void connectToDatabase() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            System.out.println("Driver loaded");
-            System.out.println("SUCCESSFUL CONNECTION");
 
             // connect to operations log database
             readOperationProperties();
@@ -76,12 +83,11 @@ public class SQLHandler {
 
                 columnNames = new ArrayList<>();
                 for(int i = 1; i <= columnCount; i++) {
-                    System.out.println("In the for loop: " + metaData.getColumnName(i));
                     columnNames.add(metaData.getColumnName(i));
                 }
 
                 cellData = new ArrayList<>();
-                while (resultSet.next()) { // jdbcRowSet.next()
+                while (resultSet.next()) {
                     for(int i = 1; i <= columnCount; i++) {
                         cellData.add(resultSet.getString(i));
                     }
@@ -89,7 +95,6 @@ public class SQLHandler {
             }
 
 
-            System.out.println("Tables affected: " + getRowsAffectedUpdate());
             setNumRows(cellData.size() / getNumColumns());
             setRowData(Lists.partition(getCellData(), getNumColumns()));
             setErrorString(null);
